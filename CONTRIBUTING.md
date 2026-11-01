@@ -16,7 +16,7 @@ We generally recommend opening an issue or discussion first, especially for larg
 
 - **Large UI changes** - The toolbar UI is intentionally minimal. Changes that affect everyone's experience need to benefit everyone.
 - **More options and settings** - We prefer opinionated defaults over flexibility.
-- **Framework wrappers** - Agentation is React-only by design. If you're interested in Vue/Svelte/Angular support, open a discussion first.
+- **New framework adapters** - React, Vue, Svelte and the custom element (which covers Angular and plain HTML) all render the shared toolbar from `package-core`. A new adapter should build on `agentation-element` the way the Vue and Svelte ones do, and toolbar changes belong in `package-core`, not in one adapter. Open a discussion before starting a new one.
 
 ## UI changes
 
