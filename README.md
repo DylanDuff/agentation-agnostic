@@ -8,15 +8,30 @@
 [![npm version](https://img.shields.io/npm/v/agentation)](https://www.npmjs.com/package/agentation)
 [![downloads](https://img.shields.io/npm/dm/agentation)](https://www.npmjs.com/package/agentation)
 
-**[Agentation](https://agentation.com)** is an agent-agnostic visual feedback tool. Click elements on your page, add notes, and copy structured output that helps AI coding agents find the exact code you're referring to.
+**[Agentation](https://agentation.com)** is an agent-agnostic and framework-agnostic visual feedback tool. Click elements on your page, add notes, and copy structured output that helps AI coding agents find the exact code you're referring to.
+
+## Packages
+
+Every package renders the same shared toolbar from [`@agentation/core`](package-core/README.md), so features and fixes land in all of them at once.
+
+| Framework | Package | Docs |
+| --- | --- | --- |
+| React 18+ | `agentation` | [package README](package/README.md) |
+| Vue 3.5+ | `agentation-vue` | [package README](package-vue/README.md) |
+| Svelte 4 and 5 (incl. SvelteKit) | `agentation-svelte` | [package README](package-svelte/README.md) |
+| Angular, plain HTML, or any other framework | `agentation-element` (`<agentation-feedback>` custom element) | [package README](package-element/README.md) |
+
+In development builds the toolbar names the React, Vue, Svelte, or Angular components around each annotated element.
 
 ## Install
 
 ```bash
-npm install agentation -D
+npm install agentation -D   # or agentation-vue, agentation-svelte, agentation-element
 ```
 
 ## Usage
+
+The React example is below. See each package README for its framework's usage.
 
 ```tsx
 import { Agentation } from 'agentation';
@@ -58,9 +73,9 @@ See the [setup guide](https://agentation.com/install#agent-integration).
 - **Integration options** – Capture identifying attributes, choose metadata-only Copy formats, and open detected source locations through your editor integration
 - **Hash routes** – Opt in to separate annotations and sessions for each hash route
 - **Dark/light mode** – Toggle in settings, persists to localStorage
-- **Zero dependencies** – No runtime libraries beyond the React peer dependencies
+- **Zero dependencies** – No runtime libraries beyond your framework's peer dependencies (the non-React packages bundle Preact internally)
 
-See the [package README](package/README.md) for props and integration examples.
+See the [React package README](package/README.md) for props and integration examples. The other packages take the same options.
 
 ## How it works
 
@@ -68,7 +83,7 @@ Agentation captures class names, selectors, and element positions so AI agents c
 
 ## Requirements
 
-- React 18+
+- One of the frameworks listed under [Packages](#packages), or none with `agentation-element`
 - Desktop browser (mobile not supported)
 
 ## Docs
