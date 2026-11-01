@@ -1,14 +1,9 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="package/logo-dark.svg">
-  <img src="package/logo.svg" alt="Agentation" width="180">
-</picture>
+# Agentation (framework agnostic fork)
 
-<br>
+> [!NOTE]
+> This is an unofficial personal fork of [Agentation](https://github.com/benjitaylor/agentation) by Benji Taylor. It is not affiliated with or endorsed by the original project, and its packages are not published to npm. For the official tool, use the [upstream repository](https://github.com/benjitaylor/agentation) and [agentation.com](https://agentation.com).
 
-[![npm version](https://img.shields.io/npm/v/agentation)](https://www.npmjs.com/package/agentation)
-[![downloads](https://img.shields.io/npm/dm/agentation)](https://www.npmjs.com/package/agentation)
-
-**[Agentation](https://agentation.com)** is an agent-agnostic and framework-agnostic visual feedback tool. Click elements on your page, add notes, and copy structured output that helps AI coding agents find the exact code you're referring to.
+This fork reworks Agentation, a visual feedback tool for AI coding agents, so the same toolbar runs in React, Vue, Svelte, Angular, or plain HTML. Click elements on your page, add notes, and copy structured output that helps AI coding agents find the exact code you're referring to.
 
 ## Packages
 
@@ -25,8 +20,11 @@ In development builds the toolbar names the React, Vue, Svelte, or Angular compo
 
 ## Install
 
+This fork's packages are not on npm (the `agentation-vue` and `agentation-svelte` names there belong to other projects). Build them from source and link or pack the one you need:
+
 ```bash
-npm install agentation -D   # or agentation-vue, agentation-svelte, agentation-element
+pnpm install
+pnpm --filter agentation-vue build   # or agentation, agentation-svelte, agentation-element
 ```
 
 ## Usage
@@ -88,7 +86,7 @@ Agentation captures class names, selectors, and element positions so AI agents c
 
 ## Docs
 
-Full documentation at [agentation.com](https://agentation.com)
+Upstream documentation is at [agentation.com](https://agentation.com). It describes the official React package, which this fork tracks.
 
 Developer reference:
 
@@ -98,4 +96,4 @@ Developer reference:
 
 © 2026 Benji Taylor
 
-Licensed under PolyForm Shield 1.0.0
+Licensed under PolyForm Shield 1.0.0. See [LICENSE](LICENSE). This fork keeps the original license and notices.
